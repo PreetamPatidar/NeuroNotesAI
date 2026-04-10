@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "com.skillmate.ai.app-merged_res-31:/layout_activity_task_submission.xml.flat",
+        "source": "com.skillmate.ai.app-main-33:/layout/activity_task_submission.xml"
+    },
+    {
+        "merged": "com.skillmate.ai.app-merged_res-31:/layout_activity_progress_dashboard.xml.flat",
+        "source": "com.skillmate.ai.app-main-33:/layout/activity_progress_dashboard.xml"
+    },
+    {
+        "merged": "com.skillmate.ai.app-merged_res-31:/layout_activity_skill_selection.xml.flat",
+        "source": "com.skillmate.ai.app-main-33:/layout/activity_skill_selection.xml"
+    },
+    {
+        "merged": "com.skillmate.ai.app-merged_res-31:/layout_activity_login.xml.flat",
+        "source": "com.skillmate.ai.app-main-33:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.skillmate.ai.app-merged_res-31:/layout_activity_roadmap.xml.flat",
+        "source": "com.skillmate.ai.app-main-33:/layout/activity_roadmap.xml"
+    },
+    {
+        "merged": "com.skillmate.ai.app-merged_res-31:/layout_activity_daily_tasks.xml.flat",
+        "source": "com.skillmate.ai.app-main-33:/layout/activity_daily_tasks.xml"
+    },
+    {
+        "merged": "com.skillmate.ai.app-merged_res-31:/layout_activity_feedback.xml.flat",
+        "source": "com.skillmate.ai.app-main-33:/layout/activity_feedback.xml"
+    },
+    {
+        "merged": "com.skillmate.ai.app-merged_res-31:/layout_item_roadmap.xml.flat",
+        "source": "com.skillmate.ai.app-main-33:/layout/item_roadmap.xml"
+    }
+]

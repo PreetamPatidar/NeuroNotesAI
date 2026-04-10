@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#F5F5F5</color>
+    <color name="error">#B00020</color>
+    <color name="on_background">#000000</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_secondary">#000000</color>
+    <color name="on_surface">#000000</color>
+    <color name="primary">#6200EE</color>
+    <color name="primary_variant">#3700B3</color>
+    <color name="secondary">#03DAC5</color>
+    <color name="secondary_variant">#018786</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <string name="advanced">Advanced</string>
+    <string name="app_name">SkillMate AI</string>
+    <string name="ask_ai">Ask AI For Help</string>
+    <string name="beginner">Beginner</string>
+    <string name="dashboard">Progress Dashboard</string>
+    <string name="email_hint">Email</string>
+    <string name="generate_roadmap">Generate Roadmap</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="login_btn">Login</string>
+    <string name="name_hint">Full Name</string>
+    <string name="password_hint">Password</string>
+    <string name="register_btn">Register</string>
+    <string name="skill_selection_title">What would you like to learn today?</string>
+    <string name="submit_answer">Submit Answer</string>
+    <string name="welcome">Welcome to Neuro Notes AI</string>
+    <style name="Theme.SkillMateAI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        
+    </style>
+</resources>

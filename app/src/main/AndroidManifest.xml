@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skillmate.ai">
+
+    <!-- Permission to connect to FastAPI Backend -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SkillMateAI"
+        android:usesCleartextTraffic="true"> <!-- Allow local dev API access -->
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.SkillSelectionActivity" />
+        <activity android:name=".activities.RoadmapActivity" />
+        <activity android:name=".activities.DailyTasksActivity" />
+        <activity android:name=".activities.TaskSubmissionActivity" />
+        <activity android:name=".activities.FeedbackActivity" />
+        <activity android:name=".activities.ProgressDashboardActivity" />
+
+    </application>
+
+</manifest>

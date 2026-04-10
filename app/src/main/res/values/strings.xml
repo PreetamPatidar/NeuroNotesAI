@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SkillMate AI</string>
+    <!-- General Strings -->
+    <string name="welcome">Welcome to Neuro Notes AI</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="name_hint">Full Name</string>
+    <string name="login_btn">Login</string>
+    <string name="register_btn">Register</string>
+    
+    <string name="skill_selection_title">What would you like to learn today?</string>
+    <string name="generate_roadmap">Generate Roadmap</string>
+    
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="advanced">Advanced</string>
+    
+    <string name="submit_answer">Submit Answer</string>
+    <string name="ask_ai">Ask AI For Help</string>
+    <string name="dashboard">Progress Dashboard</string>
+</resources>
