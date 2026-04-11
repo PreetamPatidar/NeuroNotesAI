@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroNotes AI | Future of Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-white selection:bg-cyan-500/30">
+    
+    <!-- Background Accents -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="absolute top-[10%] left-[-10%] w-[40%] h-[40%] bg-cyan-500/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute bottom-[10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/10 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Floating Navbar -->
+    <nav id="navbar" class="navbar hidden">
+        <div class="flex items-center gap-6">
+            <div class="text-xl font-extrabold bg-linear-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">NeuroNotes</div>
+            <div class="hidden md:block">
+                <input id="global-search" type="text" placeholder="Search topics..." class="input">
+            </div>
+        </div>
+        
+        <div id="current-streak" class="streak-board">0 DAY STREAK 🔥</div>
+        
+        <div class="nav-right">
+            <button id="back-btn" class="nav-btn">Back</button>
+            <div class="relative group">
+
+            <button id="tools-menu-btn" class="nav-btn">Tools</button>
+            </div>
+            <button id="profile-btn" class="profile-icon">👤</button>
+            <div id="profile-dropdown" class="dropdown hidden">
+                <div class="flex flex-col items-center mb-4">
+                    <div class="w-16 h-16 bg-linear-to-br from-cyan-500 to-indigo-600 rounded-full flex items-center justify-center text-3xl mb-2">👤</div>
+                    <strong id="profile-name" class="text-lg">User</strong>
+                    <div id="profile-email" class="text-xs text-slate-400">user@example.com</div>
+                </div>
+                <hr>
+                <button onclick="logout()" class="nav-btn w-full bg-red-500/10 border-red-500/20 text-red-400 hover:bg-red-500 hover:text-white">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- App Container -->
+    <main id="app-container" class="container pt-32 pb-12">
+        
+        <!-- Auth Screen -->
+        <div id="auth-screen" class="screen active">
+            <div class="glass-card auth-card max-w-lg mx-auto">
+                <div class="mb-8">
+                    <h1 class="text-5xl font-extrabold mb-3 bg-linear-to-r from-white via-white to-slate-400 bg-clip-text text-transparent">Welcome</h1>
+                    <p class="text-slate-400">Your AI-powered learning journey begins here.</p>
+                </div>
+                
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="register">Register</button>
+                </div>
+                
+                <form id="login-form" class="tab-content active space-y-4">
+                    <input id="login-email" type="email" placeholder="Email Address" required>
+                    <input id="login-password" type="password" placeholder="Password" required>
+                    <button type="submit" class="btn primary">Continue</button>
+                </form>
+                
+                <form id="register-form" class="tab-content space-y-4">
+                    <input id="register-email" type="email" placeholder="Email Address" required>
+                    <input id="register-password" type="password" placeholder="Password" required>
+                    <input id="register-confirm-password" type="password" placeholder="Confirm Password" required>
+                    <button type="submit" class="btn primary">Create Account</button>
+                </form>
+                
+                <div id="auth-error" class="error-text hidden mt-4 p-3 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400"></div>
+            </div>
+        </div>
+
+        <!-- Skill Selection -->
+        <div id="skill-screen" class="screen">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl font-black mb-6 tracking-tight">What do you want to<span class="bg-linear-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent"></span> Master today?</h2>
+                <p class="text-xl text-slate-400 mb-12">Select a skill or tell us what you're curious about.</p>
+                
+                <div class="skills-grid mb-12">
+                    <button class="skill-btn" data-skill="Python">
+                        <span class="text-4xl">🐍</span>
+                        <span>Python</span>
+                    </button>
+                    <button class="skill-btn" data-skill="JavaScript">
+                        <span class="text-4xl">⚡</span>
+                        <span>JavaScript</span>
+                    </button>
+                    <button class="skill-btn" data-skill="React">
+                        <span class="text-4xl">⚛️</span>
+                        <span>React</span>
+                    </button>
+                    <button class="skill-btn" data-skill="Data Science">
+                        <span class="text-4xl">📊</span>
+                        <span>Data Science</span>
+                    </button>
+                    <button class="skill-btn" data-skill="English">
+                        <span class="text-4xl">📖</span>
+                        <span>English</span>
+                    </button>
+                    <button class="skill-btn" data-skill="AI/ML">
+                        <span class="text-4xl">🤖</span>
+                        <span>AI/ML</span>
+                    </button>
+                </div>
+                
+                <div class="max-w-md mx-auto relative group">
+    <input id="custom-skill-input" placeholder="Or type any topic..." class="w-full pr-28 py-3 px-4 rounded-xl text-white bg-transparent border border-slate-700 focus:outline-none focus:border-cyan-500">
+    
+    <button id="mic-btn" title="Use Voice" class="absolute right-20 top-2 bottom-2 flex items-center justify-center px-2 text-xl text-slate-400 hover:text-cyan-400 hover:scale-110 transition-all duration-300 bg-transparent border-none">
+        🎤
+    </button>
+    
+    <button id="custom-skill-btn" class="absolute right-2 top-2 bottom-2 px-4 bg-cyan-500 text-slate-950 rounded-xl font-bold hover:bg-cyan-400 transition-colors">
+        GO
+    </button>
+</div>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard-screen" class="screen">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
+                    <div>
+                        <h1 class="text-6xl font-black mb-2">My Center</h1>
+                        <p class="text-slate-400 text-lg">Your personalized learning dashboard.</p>
+                    </div>
+                    <button id="view-progress-btn" class="btn secondary px-8">VIEW ANALYTICS</button>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="glass-card dash-card" onclick="window.showScreen('skill-screen')">
+                        <div class="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center text-cyan-400 mb-6 text-2xl">✨</div>
+                        <h3>New Skill</h3>
+                        <p>Generate a fresh roadmap for any topic you're interested in.</p>
+                    </div>
+                    <div class="glass-card dash-card" onclick="window.showScreen('roadmap-screen')">
+                        <div class="w-12 h-12 bg-indigo-500/20 rounded-full flex items-center justify-center text-indigo-400 mb-6 text-2xl">🔥</div>
+                        <h3>Resume</h3>
+                        <p>Continue your current journey exactly where you left off.</p>
+                    </div>
+                    <div class="glass-card dash-card" onclick="window.showScreen('task-screen')">
+                        <div class="w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center text-pink-400 mb-6 text-2xl">🎯</div>
+                        <h3>Daily Challenge</h3>
+                        <p>A quick 5-min task to keep your momentum going.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Roadmap -->
+        <div id="roadmap-screen" class="screen">
+            <div class="glass-card p-10 max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12 border-b border-white/5 pb-8">
+                    <button class="btn secondary text-xs" onclick="showScreen('dashboard-screen')">← DASHBOARD</button>
+                    <h2 id="roadmap-skill-title" class="text-4xl font-extrabold text-cyan-400">Skill Roadmap</h2>
+                    <div class="w-24"></div> <!-- Spacer -->
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="roadmap-level">
+                        <h3>Foundation</h3>
+                        <ul id="roadmap-beginner" class="space-y-3"></ul>
+                    </div>
+                    <div class="roadmap-level">
+                        <h3>Core Concepts</h3>
+                        <ul id="roadmap-intermediate" class="space-y-3"></ul>
+                    </div>
+                    <div class="roadmap-level">
+                        <h3>Mastery</h3>
+                        <ul id="roadmap-advanced" class="space-y-3"></ul>
+                    </div>
+                    <div class="roadmap-links mt-10">
+                        <h3>Study Resources</h3>
+                        <p class="text-slate-400 mb-4">Helpful links and resources to learn this topic in depth.</p>
+                        <ul id="roadmap-links" class="space-y-3"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task -->
+        <div id="task-screen" class="screen">
+            <div class="max-w-3xl mx-auto">
+                <div class="glass-card p-10">
+                    <button class="btn secondary text-xs mb-8 back-to-roadmap">← ROADMAP</button>
+                    <h2 id="task-topic-title" class="text-3xl font-bold mb-8 text-cyan-400">Topic: Introduction</h2>
+                    
+                    <div id="task-description" class="bg-indigo-500/5 p-8 rounded-3xl mb-8 text-xl leading-relaxed border border-indigo-500/10 italic text-slate-300"></div>
+                    
+                    <textarea id="task-answer" placeholder="Write your explanation here..." class="text-lg min-h-[200px]"></textarea>
+                    <button id="submit-task-btn" class="btn primary py-4">SUBMIT FOR AI EVALUATION</button>
+                    
+                    <div id="evaluation-result" class="hidden mt-12 pt-12 border-t border-white/5 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="score-circle"><span id="eval-score">0</span></div>
+                            <div class="text-sm font-bold opacity-60 mb-6 uppercase tracking-widest">Accuracy Score</div>
+                            <div id="eval-feedback" class="text-lg bg-emerald-500/5 p-6 rounded-2xl border border-emerald-500/10 text-emerald-400/90 mb-8 max-w-xl"></div>
+                            <button class="btn secondary back-to-roadmap px-12">CONTINUE JOURNEY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress -->
+        <div id="progress-screen" class="screen">
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card p-12 text-center">
+                    <h2 class="text-5xl font-black mb-12 bg-linear-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent uppercase tracking-tighter">Your AI Profile</h2>
+                    
+                    <div class="progress-grid mb-12">
+                        <div class="stat-card">
+                            <h4>Tasks</h4>
+                            <h2 id="prog-tasks">0</h2>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Precision</h4>
+                            <h2 id="prog-accuracy">0%</h2>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Streak</h4>
+                            <h2 id="prog-streak">0 🔥</h2>
+                        </div>
+                    </div>
+                    
+                    <button class="btn primary max-w-sm" onclick="showScreen('dashboard-screen')">BACK TO DASHBOARD</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading-screen" class="screen hidden">
+            <div class="flex flex-col items-center justify-center min-h-[60vh]">
+                <div class="spinner mb-6"></div>
+                <p id="loading-text" class="text-2xl font-medium text-slate-400 animate-pulse">Consulting AI Coach...</p>
+            </div>
+        </div>
+
+    </main>
+
+        <!-- NeuroNotes AI Engine -->
+        <section id="neuro-notes-section" class="glass-card p-8 max-w-2xl mx-auto mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-cyan-400 flex items-center gap-3">
+                🧠 <span>NeuroNotes AI Engine</span>
+            </h3>
+            <textarea id="neuro-notes-input" rows="3" placeholder="Enter text (1-3 words for dictionary, longer notes for summary)..." class="w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 resize-vertical mb-4"></textarea>
+            <button id="neuro-notes-btn" class="btn primary w-full">Analyze</button>
+            <div id="neuro-notes-result" class="hidden mt-6 p-6 bg-white/5 rounded-xl border border-white/10">
+                <div id="neuro-type" class="text-sm font-bold uppercase tracking-wide mb-4"></div>
+                <h4 id="neuro-title" class="text-xl font-semibold mb-3"></h4>
+                <p id="neuro-content" class="mb-4 text-slate-300"></p>
+                <ul id="neuro-details" class="space-y-2 text-sm"></ul>
+            </div>
+        </section>
+
+    <footer class="footer mt-auto py-8 text-slate-500 text-xs text-center border-t border-white/5">
+        <p>© 2026 NeuroNotes AI. Powering the next generation of minds.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
