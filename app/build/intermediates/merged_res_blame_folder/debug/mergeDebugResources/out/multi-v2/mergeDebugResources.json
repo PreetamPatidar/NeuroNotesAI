@@ -3549,25 +3549,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\patid\\OneDrive\\Desktop\\neuro note\\android\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "100",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "822"
-                    },
-                    "to": {
-                        "startLines": "6529",
-                        "startColumns": "4",
-                        "startOffsets": "458183",
-                        "endLines": "6541",
-                        "endColumns": "12",
-                        "endOffsets": "458784"
-                    }
-                },
-                {
                     "source": "C:\\Users\\patid\\.gradle\\caches\\transforms-4\\481a8f3f906efa7861f944b3a1d59fc5\\transformed\\coordinatorlayout-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,6,16",
@@ -3622,6 +3603,23 @@
                         "endLines": "138,141,1062,11255",
                         "endColumns": "55,47,51,24",
                         "endOffsets": "7047,7203,63158,714207"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\patid\\OneDrive\\Documents\\GitHub\\SkillMateAI\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "15,1,18,13,19,4,11,14,7,6,5,8,10,17,3",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "668,17,778,566,830,161,497,613,308,259,207,353,410,721,98",
+                        "endColumns": "45,49,50,45,56,44,61,53,43,47,50,49,85,55,61",
+                        "endOffsets": "709,62,824,607,882,201,554,662,347,302,253,398,491,772,155"
+                    },
+                    "to": {
+                        "startLines": "1976,1978,1980,1981,1992,1993,2001,2004,2006,2113,2114,2120,2129,2131,2132",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "130665,130794,130994,131045,132557,132614,133287,133656,133769,149326,149374,150227,151186,151343,151399",
+                        "endColumns": "45,49,50,45,56,44,61,53,43,47,50,49,85,55,61",
+                        "endOffsets": "130706,130839,131040,131086,132609,132654,133344,133705,133808,149369,149420,150272,151267,151394,151456"
                     }
                 },
                 {
@@ -3696,6 +3694,42 @@
                         "endLines": "1806,1839,1876,11403,11407",
                         "endColumns": "56,64,63,24,24",
                         "endOffsets": "120349,122044,123958,719404,719553"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\patid\\OneDrive\\Documents\\GitHub\\SkillMateAI\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "6,8,12,14,10,11,13,2,3,4,5,7,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "249,338,475,570,381,427,524,57,100,151,196,295,614",
+                        "endColumns": "44,39,47,42,44,46,44,41,49,43,51,41,39",
+                        "endOffsets": "289,373,518,608,421,469,564,94,145,190,243,332,649"
+                    },
+                    "to": {
+                        "startLines": "636,692,938,939,940,941,942,943,952,955,960,961,968",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "32479,36436,54980,55028,55071,55116,55163,55208,55838,56003,56343,56395,56844",
+                        "endColumns": "44,39,47,42,44,46,44,41,49,43,51,41,39",
+                        "endOffsets": "32519,36471,55023,55066,55111,55158,55203,55245,55883,56042,56390,56432,56879"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\patid\\OneDrive\\Documents\\GitHub\\SkillMateAI\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "102",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "836"
+                    },
+                    "to": {
+                        "startLines": "6529",
+                        "startColumns": "4",
+                        "startOffsets": "458183",
+                        "endLines": "6541",
+                        "endColumns": "12",
+                        "endOffsets": "458784"
                     }
                 },
                 {
@@ -3809,23 +3843,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\patid\\OneDrive\\Desktop\\neuro note\\android\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "15,1,18,13,19,4,11,14,7,6,5,8,10,17,3",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "653,16,760,553,811,157,486,599,301,253,202,345,400,704,95",
-                        "endColumns": "45,49,50,45,56,44,61,53,43,47,50,49,85,55,61",
-                        "endOffsets": "694,61,806,594,863,197,543,648,340,296,248,390,481,755,152"
-                    },
-                    "to": {
-                        "startLines": "1976,1978,1980,1981,1992,1993,2001,2004,2006,2113,2114,2120,2129,2131,2132",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "130665,130794,130994,131045,132557,132614,133287,133656,133769,149326,149374,150227,151186,151343,151399",
-                        "endColumns": "45,49,50,45,56,44,61,53,43,47,50,49,85,55,61",
-                        "endOffsets": "130706,130839,131040,131086,132609,132654,133344,133705,133808,149369,149420,150272,151267,151394,151456"
-                    }
-                },
-                {
                     "source": "C:\\Users\\patid\\.gradle\\caches\\transforms-4\\be482c4a8f2a2d8cefc7eb045749ea38\\transformed\\lifecycle-runtime-2.6.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -3840,23 +3857,6 @@
                         "startOffsets": "123692",
                         "endColumns": "42",
                         "endOffsets": "123730"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\patid\\OneDrive\\Desktop\\neuro note\\android\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "6,8,12,14,10,11,13,2,3,4,5,7,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "243,330,463,556,371,416,511,55,97,147,191,288,599",
-                        "endColumns": "44,39,47,42,44,46,44,41,49,43,51,41,39",
-                        "endOffsets": "283,365,506,594,411,458,551,92,142,186,238,325,634"
-                    },
-                    "to": {
-                        "startLines": "636,692,938,939,940,941,942,943,952,955,960,961,968",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "32479,36436,54980,55028,55071,55116,55163,55208,55838,56003,56343,56395,56844",
-                        "endColumns": "44,39,47,42,44,46,44,41,49,43,51,41,39",
-                        "endOffsets": "32519,36471,55023,55066,55111,55158,55203,55245,55883,56042,56390,56432,56879"
                     }
                 },
                 {

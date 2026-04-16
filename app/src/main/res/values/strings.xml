@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SkillMate AI</string>
+    <string name="app_name">NeuroNoteAI</string>
     <!-- General Strings -->
     <string name="welcome">Welcome to Neuro Notes AI</string>
     <string name="email_hint">Email</string>
